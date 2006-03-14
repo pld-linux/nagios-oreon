@@ -3,19 +3,20 @@
 # NOTE
 # - works with nagios 1.2 (nagios 2.0 not yet)
 # - works with php 4 (php 5 not yet)
+%define	_rc RC2
 Summary:	Monitoring solution based on Nagios
 Name:		nagios-oreon
-Version:	1.2.2
-Release:	0.7
+Version:	1.2.3
+Release:	%{_rc}.1
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	http://download.oreon-project.org/tgz/oreon-%{version}.tar.gz
-# Source0-md5:	44f4f3b9da38065235d40889809f2985
+Source0:	http://download.oreon-project.org/tgz/oreon-%{version}-%{_rc}.tar.gz
+# Source0-md5:	905a194a8e4925c89e586378855f3676
 Patch0:		oreon-pld.patch
 URL:		http://www.oreon-project.org/
 BuildRequires:	rpmbuild(macros) >= 1.268
-Requires:	perl-GD
 Requires:	nagios-common
+Requires:	perl-GD
 Requires:	php >= 3:4
 Requires:	php-gd
 Requires:	php-snmp
@@ -50,7 +51,7 @@ pierwszej instalacji. Potem nale¿y go odinstalowaæ, jako ¿e
 pozostawienie plików instalacyjnych mog³oby byæ niebezpieczne.
 
 %prep
-%setup -q -n oreon-%{version}
+%setup -q -n oreon-%{version}%{?_rc:-%{_rc}}
 # undos the source
 find . -type f -print0 | xargs -0 sed -i -e 's,\r$,,'
 %patch0 -p1
@@ -83,6 +84,7 @@ chmod g+w %{_appdir}/include/trafficMap/{bg,png}
 touch %{_appdir}/oreon.conf.php
 chown root:http %{_appdir}/oreon.conf.php
 chmod g+w %{_appdir}/oreon.conf.php
+chown -R http %{_appdir}/nagios_cfg
 
 %triggerin -- apache1
 %webapp_register apache %{_webapp}

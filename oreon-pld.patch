@@ -1,5 +1,5 @@
---- oreon-1.2.2/oreon_src/install/setup.php	2006-03-14 20:42:53.000000000 +0200
-+++ ./setup.php	2006-03-14 20:47:59.000000000 +0200
+--- oreon-1.2.3-RC2/oreon_src/install/setup.php~	2006-03-14 21:31:09.000000000 +0200
++++ oreon-1.2.3-RC2/oreon_src/install/setup.php	2006-03-14 21:33:06.000000000 +0200
 @@ -150,19 +150,19 @@
  		  </tr>
  		  <tr>
@@ -18,7 +18,7 @@
 +			<td><input name="rrdtool_dir" type="text" value="/usr/bin" size="40"></td>
  		  </tr>
  		  <tr>
-             <td style="padding-left:50px ">RRDTool snmp binary path</td>
+             <td style="padding-left:50px ">SNMP binary path</td>
 -			<td><input name="snmp_dir" type="text" value="/usr/local/bin" size="40"></td>
 +			<td><input name="snmp_dir" type="text" value="/usr/bin" size="40"></td>
  		  </tr>
