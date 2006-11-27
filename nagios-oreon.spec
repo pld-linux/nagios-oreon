@@ -19,10 +19,10 @@ URL:		http://www.oreon-project.org/
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	nagios-common
 Requires:	perl-GD
-Requires:	php >= 3:4
-Requires:	php-gd
-Requires:	php-snmp
+Requires:	php(gd)
+Requires:	php(snmp)
 Requires:	webapps
+Requires:	webserver(php) >= 4.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
