@@ -6,7 +6,7 @@
 # - works with php 4 (php 5 not yet)
 %define	_rc RC2
 Summary:	Monitoring solution based on Nagios
-Summary(pl):	Rozwi±zanie monitoruj±ce oparte na Nagiosie
+Summary(pl.UTF-8):   RozwiÄ…zanie monitorujÄ…ce oparte na Nagiosie
 Name:		nagios-oreon
 Version:	1.2.3
 Release:	%{_rc}.1
@@ -36,14 +36,14 @@ Oreon is an Open Source monitoring solution based on Nagios. The
 objective of this project goes beyond the simple supply of an alarm
 reporting tool.
 
-%description -l pl
-Oreon to kompletne rozwi±zanie monitoruj±ce o otwartych ¼ród³ach
-oparte na Nagiosie. Cel tego projektu wykracza poza proste narzêdzie
-do zg³aszania alarmów.
+%description -l pl.UTF-8
+Oreon to kompletne rozwiÄ…zanie monitorujÄ…ce o otwartych ÅºrÃ³dÅ‚ach
+oparte na Nagiosie. Cel tego projektu wykracza poza proste narzÄ™dzie
+do zgÅ‚aszania alarmÃ³w.
 
 %package setup
 Summary:	Oreon setup package
-Summary(pl):	Pakiet do wstêpnej konfiguracji Oreona
+Summary(pl.UTF-8):   Pakiet do wstÄ™pnej konfiguracji Oreona
 Group:		Applications/WWW
 Requires:	%{name} = %{version}-%{release}
 
@@ -52,10 +52,10 @@ Install this package to configure initial Oreon installation. You
 should uninstall this package when you're done, as it considered
 insecure to keep the setup files in place.
 
-%description setup -l pl
-Ten pakiet nale¿y zainstalowaæ w celu wstêpnej konfiguracji Oreona po
-pierwszej instalacji. Potem nale¿y go odinstalowaæ, jako ¿e
-pozostawienie plików instalacyjnych mog³oby byæ niebezpieczne.
+%description setup -l pl.UTF-8
+Ten pakiet naleÅ¼y zainstalowaÄ‡ w celu wstÄ™pnej konfiguracji Oreona po
+pierwszej instalacji. Potem naleÅ¼y go odinstalowaÄ‡, jako Å¼e
+pozostawienie plikÃ³w instalacyjnych mogÅ‚oby byÄ‡ niebezpieczne.
 
 %prep
 %setup -q -n oreon-%{version}%{?_rc:-%{_rc}}
