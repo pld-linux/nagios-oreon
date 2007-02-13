@@ -6,7 +6,7 @@
 # - works with php 4 (php 5 not yet)
 %define	_rc RC2
 Summary:	Monitoring solution based on Nagios
-Summary(pl.UTF-8):   Rozwiązanie monitorujące oparte na Nagiosie
+Summary(pl.UTF-8):	Rozwiązanie monitorujące oparte na Nagiosie
 Name:		nagios-oreon
 Version:	1.2.3
 Release:	%{_rc}.1
@@ -43,7 +43,7 @@ do zgłaszania alarmów.
 
 %package setup
 Summary:	Oreon setup package
-Summary(pl.UTF-8):   Pakiet do wstępnej konfiguracji Oreona
+Summary(pl.UTF-8):	Pakiet do wstępnej konfiguracji Oreona
 Group:		Applications/WWW
 Requires:	%{name} = %{version}-%{release}
 
