@@ -1,4 +1,5 @@
 # TODO
+# - merge update from oreon.spec, then cvs rm oreon.spec
 # - specify perms in files, not post
 # - plugins
 # NOTE
