@@ -62,7 +62,7 @@ pozostawienie plików instalacyjnych mogłoby być niebezpieczne.
 %setup -q -n oreon-%{version}%{?_rc:-%{_rc}}
 # undos the source
 find . -type f -print0 | xargs -0 sed -i -e 's,\r$,,'
-%patch0 -p1
+%patch -P0 -p1
 
 cat > apache.conf <<'EOF'
 Alias /oreon %{_appdir}
